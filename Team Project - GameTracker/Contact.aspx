@@ -16,6 +16,7 @@
                     <div class="panel-body">
                         <address>
                             <strong>Nick Rowlandson</strong><br>
+                            <strong>Tim Harasym</strong><br>
                             1 Toronto Drive<br>
                             Barrie, ON L9L 1L0<br>
                             <abbr title="Phone">Tel:</abbr>

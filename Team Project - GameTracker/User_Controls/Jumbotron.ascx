@@ -5,6 +5,7 @@
         <div class="col-md-offset-2 col-md-8">
             <div class="jumbotron">
                 <h1 id="JumbotronH1" runat="server"></h1>
+                <h3 id="JumbotronH3" runat="server"></h3>
             </div>
         </div>
     </div>

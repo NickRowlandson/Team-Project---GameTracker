@@ -38,5 +38,20 @@ namespace Team_Project___GameTracker
                     break;
             }
         }
+
+        protected void SendButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void LoginButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void RegisterButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

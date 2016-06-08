@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Team_Project___GameTracker.User_Controls
-{
-
-
-    public partial class Jumbotron
-    {
-
+namespace Team_Project___GameTracker.User_Controls {
+    
+    
+    public partial class Jumbotron {
+        
         /// <summary>
         /// JumbotronH1 control.
         /// </summary>
@@ -22,5 +20,14 @@ namespace Team_Project___GameTracker.User_Controls
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl JumbotronH1;
+        
+        /// <summary>
+        /// JumbotronH3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl JumbotronH3;
     }
 }
