@@ -5,7 +5,7 @@ GameTracker Layouts (External Documentation/ First Drafts)
 ![alt tag](https://github.com/NickRowlandson/Team-Project---GameTracker/blob/master/layout-images/Splash-Page.png)
 
 -- User Home Page --
-![alt tag](Team-Project---GameTracker/layout-images/Splash-Page.png)
+![alt tag](https://github.com/NickRowlandson/Team-Project---GameTracker/blob/master/layout-images/User-Home.png)
 
 -- Add Page Form --
-![alt tag](Team-Project---GameTracker/layout-images/User-Home.png)
+![alt tag](Team-Project---GameTracker/layout-images/Add-Page.png)
