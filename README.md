@@ -2,10 +2,10 @@
 GameTracker Layouts (External Documentation/ First Drafts)
 
 -- Splash Page / Main Home Page --
-![alt tag](http://imgur.com/FeEQJN9)
+![alt tag](Team-Project---GameTracker/layout-images/Splash-Page.png)
 
 -- User Home Page --
-![alt tag](http://imgur.com/yjTU7Vy)
+![alt tag](Team-Project---GameTracker/layout-images/Splash-Page.png)
 
 -- Add Page Form --
-![alt tag](http://imgur.com/wUBY80L)
+![alt tag](Team-Project---GameTracker/layout-images/User-Home.png)
