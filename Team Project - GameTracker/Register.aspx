@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
-                <h1>Login</h1>
+                <h1>Register</h1>
                 <div class="form-group">
                     <label class="control-label" for="FirstNameTextBox">First Name</label>
                     <asp:TextBox runat="server" class="form-control" ID="FirstNameTextBox" placeholder="First Name" required="true"></asp:TextBox>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="text-right">
                     <a class="btn btn-warning btn-lg" id="CancelButton" href="Default.aspx">Cancel</a>
-                    <asp:Button runat="server" CssClass="btn btn-primary btn-lg" ID="RegisterButton" Text="Register" OnClick="RegisterButton_Click" CausesValidation="true" />
+                    <asp:Button runat="server" CssClass="btn btn-success btn-lg" ID="RegisterButton" Text="Register" OnClick="RegisterButton_Click" CausesValidation="true" />
                 </div>
             </div>
         </div>

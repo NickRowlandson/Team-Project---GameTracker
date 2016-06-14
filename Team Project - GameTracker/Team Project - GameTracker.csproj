@@ -73,7 +73,9 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\app.css" />
     <Content Include="Default.aspx" />
+    <Content Include="GameDetails.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="ManageGames.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="User_Controls\Jumbotron.ascx" />
     <Content Include="User_Controls\Navbar.ascx" />
@@ -132,12 +134,26 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GameDetails.aspx.cs">
+      <DependentUpon>GameDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GameDetails.aspx.designer.cs">
+      <DependentUpon>GameDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ManageGames.aspx.cs">
+      <DependentUpon>ManageGames.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManageGames.aspx.designer.cs">
+      <DependentUpon>ManageGames.aspx</DependentUpon>
     </Compile>
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
