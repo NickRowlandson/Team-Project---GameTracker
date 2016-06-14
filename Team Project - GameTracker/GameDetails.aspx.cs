@@ -29,17 +29,20 @@ namespace Team_Project___GameTracker
             // connect to the EF DB
             using (DefaultConnection db = new DefaultConnection())
             {
-                // populate a student object instance with the studentID from the URL parameter
-                Student updatedStudent = (from student in db.Students
-                                          where student.StudentID == StudentID
-                                          select student).FirstOrDefault();
+                // populate a game object instance with the gameID from the URL parameter
+                Game updatedGame = (from game in db.Games
+                                          where game.GameID == GameID
+                                          select game).FirstOrDefault();
 
-                // map the student properties to the form controls
-                if (updatedStudent != null)
+                // map the game properties to the form controls
+                if (updatedGame != null)
                 {
-                    LastNameTextBox.Text = updatedStudent.LastName;
-                    FirstNameTextBox.Text = updatedStudent.FirstMidName;
-                    EnrollmentDateTextBox.Text = updatedStudent.EnrollmentDate.ToString("yyyy-MM-dd");
+                    GameNameTextBox.Text = updatedGame.GameName;
+                    TeamOneTextBox.Text = updatedGame.TeamOne;
+                    TeamOneScoreTextBox.Text = updatedGame.TeamOneScore;
+                    TeamTwoTextBox.Text = updatedGame.TeamTwo;
+                    TeamTwoScoreTextBox.Text = updatedGame.TeamTwoScore;
+                    CalendarWeekTextBox.Text = updatedGame.CalendarWeek.ToString("yyyy-MM-dd");
                 }
             }
         }
@@ -49,47 +52,51 @@ namespace Team_Project___GameTracker
             // Use Ef to connect to the server
             using (DefaultConnection db = new DefaultConnection())
             {
-                // Use the student model to create a new student object and also save a new record
-                Student newStudent = new Student();
+                // Use the game model to create a new game object and also save a new record
+                Game newGame = new Game();
 
-                int StudentID = 0;
+                int GameID = 0;
 
-                if (Request.QueryString.Count > 0) // our URL has a StudentID in it
+                if (Request.QueryString.Count > 0) // our URL has a GameID in it
                 {
                     // get the id from the URL
-                    StudentID = Convert.ToInt32(Request.QueryString["StudentID"]);
+                    GameID = Convert.ToInt32(Request.QueryString["GameID"]);
 
-                    // get the current student from the EF database
-                    newStudent = (from student in db.Students
-                                  where student.StudentID == StudentID
-                                  select student).FirstOrDefault();
+                    // get the current game from the EF database
+                    newGame = (from game in db.Games
+                                  where game.GameID == GameID
+                                  select game).FirstOrDefault();
                 }
 
 
-                // add data to the new student record
-                newStudent.LastName = LastNameTextBox.Text;
-                newStudent.FirstMidName = FirstNameTextBox.Text;
-                newStudent.EnrollmentDate = Convert.ToDateTime(EnrollmentDateTextBox.Text);
+                // add data to the new game record
+                newGame.GameName = GameNameTextBox.Text;
+                newGame.TeamOne = TeamOneTextBox.Text;
+                newGame.TeamOneScore = TeamOneScoreTextBox.Text;
+                newGame.TeamTwo = TeamTwoTextBox.Text;
+                newGame.TeamTwoScore = TeamTwoScoreTextBox.Text;
+                newGame.GameResult = GameResultTextBox.Text;
+                newGame.CalendarWeek = Convert.ToDateTime(CalendarWeekTextBox.Text);
 
-                // use LINQ to ADO.NET to add / insert new student into the database
+                // use LINQ to ADO.NET to add / insert new game into the database
 
-                if (StudentID == 0)
+                if (GameID == 0)
                 {
-                    db.Students.Add(newStudent);
+                    db.Games.Add(newGame);
                 }
 
                 // save our changes
                 db.SaveChanges();
 
-                // redirect back to the updated students page
-                Response.Redirect("~/Students.aspx");
+                // redirect back to the updated manage games page
+                Response.Redirect("~/ManageGames.aspx");
             }
         }
 
         protected void CancelButton_Click(object sender, EventArgs e)
         {
-            // Redirect back to Students page
-            Response.Redirect("~/Students.aspx");
+            // Redirect back to manage games page
+            Response.Redirect("~/ManageGames.aspx");
         }
     }
 }
