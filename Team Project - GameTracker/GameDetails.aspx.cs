@@ -68,7 +68,6 @@ namespace Team_Project___GameTracker
                                   select game).FirstOrDefault();
                 }
 
-
                 // add data to the new game record
                 newGame.GameName = GameNameTextBox.Text;
                 newGame.TeamOne = TeamOneTextBox.Text;
