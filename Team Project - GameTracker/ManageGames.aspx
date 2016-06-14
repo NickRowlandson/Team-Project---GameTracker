@@ -4,7 +4,7 @@
     <div class="container">
         <h1>Manage Games</h1>
         <a href="GameDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add Game</a>
-        <div class="calendarWrapper"">
+        <div>
             <asp:Calendar
                 ID="Calendar1"
                 runat="server"
