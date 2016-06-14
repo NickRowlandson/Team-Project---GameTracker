@@ -76,7 +76,7 @@
     <Content Include="GameDetails.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="ManageGames.aspx" />
-    <Content Include="Register.aspx" />
+    <Content Include="Scripts\gametrack.sql" />
     <Content Include="User_Controls\Jumbotron.ascx" />
     <Content Include="User_Controls\Navbar.ascx" />
     <Content Include="packages.config" />
@@ -154,13 +154,6 @@
     </Compile>
     <Compile Include="ManageGames.aspx.designer.cs">
       <DependentUpon>ManageGames.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="User_Controls\Jumbotron.ascx.cs">
       <DependentUpon>Jumbotron.ascx</DependentUpon>

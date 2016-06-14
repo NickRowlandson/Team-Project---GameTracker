@@ -16,7 +16,6 @@
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Password is required!" ControlToValidate="PasswordTextBox" SetFocusOnError="true" Display="Dynamic" CssClass="alert-danger"></asp:RequiredFieldValidator>
                 </div>
                 <div class="text-right">
-                    <a class="btn btn-warning btn-lg" id="CancelButton" href="Default.aspx">Cancel</a>
                     <asp:Button runat="server" CssClass="btn btn-primary btn-lg" ID="LoginButton" Text="Login" OnClick="LoginButton_Click" CausesValidation="true" />
                 </div>
             </div>

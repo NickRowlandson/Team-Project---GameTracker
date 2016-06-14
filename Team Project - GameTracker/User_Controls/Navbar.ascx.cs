@@ -44,11 +44,5 @@ namespace Team_Project___GameTracker
             // redirect to login page
             Response.Redirect("~/Login.aspx");
         }
-
-        protected void RegisterButton_Click(object sender, EventArgs e)
-        {
-            // redirect to register page
-            Response.Redirect("~/Register.aspx");
-        }
     }
 }

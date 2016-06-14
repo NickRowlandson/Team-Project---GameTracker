@@ -3,7 +3,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
         <h1>Manage Games</h1>
-        <a href="GameDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i>Add Game</a>
+        <a href="GameDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add Game</a>
         <div class="calendarWrapper"">
             <asp:Calendar
                 ID="Calendar1"
