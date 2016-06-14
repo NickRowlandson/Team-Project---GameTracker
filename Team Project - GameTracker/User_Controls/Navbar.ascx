@@ -16,8 +16,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <li id="home" runat="server"><a href="Default.aspx"><i class="fa fa-home fa-lg"></i> Home</a></li>
                 <li id="contact" runat="server"><a href="Contact.aspx"><i class="fa fa-phone fa-lg"></i> Contact</a></li>
-                <asp:Button runat="server" CssClass="btn btn-success" ID="LoginButton" Text="Login" OnClick="LoginButton_Click" />
-                <asp:Button runat="server" CssClass="btn btn-primary" ID="RegisterButton" Text="Register" OnClick="RegisterButton_Click" />  
+                <asp:Button runat="server" CssClass="btn btn-success navbar-btn" ID="LoginButton" Text="Login" OnClick="LoginButton_Click" />
+                <asp:Button runat="server" CssClass="btn btn-primary navbar-btn" ID="RegisterButton" Text="Register" OnClick="RegisterButton_Click" />  
         </div>
         <!-- /.navbar-collapse -->
     </div>
