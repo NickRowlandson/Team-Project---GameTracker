@@ -67,6 +67,15 @@ namespace Team_Project___GameTracker {
         protected global::System.Web.UI.WebControls.TextBox GameResultTextBox;
         
         /// <summary>
+        /// Calendar2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar Calendar2;
+        
+        /// <summary>
         /// CalendarWeekTextBox control.
         /// </summary>
         /// <remarks>
@@ -74,15 +83,6 @@ namespace Team_Project___GameTracker {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox CalendarWeekTextBox;
-        
-        /// <summary>
-        /// RangeValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
         
         /// <summary>
         /// SaveButton control.

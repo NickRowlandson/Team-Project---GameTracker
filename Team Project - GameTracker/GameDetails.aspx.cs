@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Collections;
 
 // Using statements required for EF DB access
 using Team_Project___GameTracker.Models;
@@ -13,8 +14,17 @@ namespace Team_Project___GameTracker
 {
     public partial class GameDetails : System.Web.UI.Page
     {
+        DateTime week;
         protected void Page_Load(object sender, EventArgs e)
         {
+            Calendar2.SelectionMode = CalendarSelectionMode.DayWeek;
+            ArrayList selectedDates = new ArrayList();
+            DateTime today = DateTime.Now;
+            DateTime firstDay = today.AddDays(-(double)(today.DayOfWeek));
+            for (int loop = 0; loop < 7; loop++)
+                Calendar2.SelectedDates.Add(firstDay.AddDays(loop));
+            this.week = firstDay;
+
             if ((!IsPostBack) && (Request.QueryString.Count > 0))
             {
                 this.GetGame();
@@ -91,6 +101,20 @@ namespace Team_Project___GameTracker
                 // redirect back to the updated manage games page
                 Response.Redirect("~/ManageGames.aspx");
             }
+        }
+
+        protected void Calendar2_SelectionChanged(object sender, EventArgs e)
+        {
+            this.week = Calendar2.SelectedDate;
+
+            var formatWeek = week.ToString("MM/dd/yyyy");
+
+            CalendarWeekTextBox.Text = formatWeek;
+        }
+
+        protected void Calendar2_DayRender(object sender, DayRenderEventArgs e)
+        {
+            e.Day.IsSelectable = false;
         }
     }
 }

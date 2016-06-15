@@ -14,6 +14,7 @@ namespace Team_Project___GameTracker
 {
     public partial class ManageGames : System.Web.UI.Page
     {
+        DateTime week;
         protected void Page_Load(object sender, EventArgs e)
         {
             Calendar1.SelectionMode = CalendarSelectionMode.DayWeek;
@@ -22,7 +23,8 @@ namespace Team_Project___GameTracker
             DateTime firstDay = today.AddDays(-(double)(today.DayOfWeek));
             for (int loop = 0; loop < 7; loop++)
                 Calendar1.SelectedDates.Add(firstDay.AddDays(loop));
-
+            this.week = firstDay;
+            System.Diagnostics.Debug.WriteLine(week);
             this.GetGames();
         }
 
@@ -34,6 +36,7 @@ namespace Team_Project___GameTracker
 
                 // query the games table using EF and LINQ
                 var Games = (from allGames in db.Games
+                             where allGames.CalendarWeek == week
                                 select allGames);
 
                 // bind the result to the GridView
@@ -44,7 +47,9 @@ namespace Team_Project___GameTracker
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
         {
-          
+            this.week = Calendar1.SelectedDate;
+
+            this.GetGames();
         }
 
         protected void Calendar1_DayRender(object sender, DayRenderEventArgs e)

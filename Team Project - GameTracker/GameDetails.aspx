@@ -28,13 +28,20 @@
                     <asp:TextBox runat="server" CssClass="form-control" ID="TeamTwoScoreTextBox" placeholder="Team Two Score" required="true"></asp:TextBox>
                 </div>
                 <div class="form-group">
-                <div class="form-group">
                     <label class="control-label" for="GameResultTextBox">Game Result</label>
                     <asp:TextBox runat="server" CssClass="form-control" ID="GameResultTextBox" placeholder="Game Result" required="true"></asp:TextBox>
                 </div>
+                <div class="form-group">
                     <label class="control-label" for="CalendarWeekTextBox">Calendar Week</label>
-                    <asp:TextBox runat="server" TextMode="Date" CssClass="form-control" ID="CalendarWeekTextBox" placeholder="Date mm/dd/yyyy" required="true"></asp:TextBox>
-                    <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Invalid Date! Format: mm/dd/yyyy" ControlToValidate="CalendarWeekTextBox" MinimumValue="01/01/2000" MaximumValue="01/01/2099" Type="Date" Display="Dynamic" BackColor="Red" ForeColor="White" Font-Size="Large"></asp:RangeValidator>
+                    <asp:Calendar
+                        ID="Calendar2"
+                        runat="server"
+                        OnDayRender="Calendar2_DayRender"
+                        SelectionMode="DayWeek"
+                        OnSelectionChanged="Calendar2_SelectionChanged"></asp:Calendar>
+                </div>
+                <div class="form-group">
+                    <asp:TextBox runat="server" CssClass="form-control" ID="CalendarWeekTextBox" placeholder="Date mm/dd/yyyy" required="true" ReadOnly="true"></asp:TextBox>
                 </div>
                 <div class="text-right">
                     <a href="ManageGames.aspx" class="btn btn-warning btn-lg">Cancel</a>
