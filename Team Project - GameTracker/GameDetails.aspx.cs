@@ -42,6 +42,7 @@ namespace Team_Project___GameTracker
                     TeamOneScoreTextBox.Text = updatedGame.TeamOneScore;
                     TeamTwoTextBox.Text = updatedGame.TeamTwo;
                     TeamTwoScoreTextBox.Text = updatedGame.TeamTwoScore;
+                    GameResultTextBox.Text = updatedGame.GameResult;
                     CalendarWeekTextBox.Text = updatedGame.CalendarWeek.ToString("yyyy-MM-dd");
                 }
             }
