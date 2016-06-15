@@ -92,11 +92,5 @@ namespace Team_Project___GameTracker
                 Response.Redirect("~/ManageGames.aspx");
             }
         }
-
-        protected void CancelButton_Click(object sender, EventArgs e)
-        {
-            // Redirect back to manage games page
-            Response.Redirect("~/ManageGames.aspx");
-        }
     }
 }

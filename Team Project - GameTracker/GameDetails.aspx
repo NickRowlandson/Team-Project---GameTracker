@@ -37,7 +37,7 @@
                     <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Invalid Date! Format: mm/dd/yyyy" ControlToValidate="CalendarWeekTextBox" MinimumValue="01/01/2000" MaximumValue="01/01/2099" Type="Date" Display="Dynamic" BackColor="Red" ForeColor="White" Font-Size="Large"></asp:RangeValidator>
                 </div>
                 <div class="text-right">
-                    <asp:Button Text="Cancel" ID="CancelButton" CssClass="btn btn-warning btn-lg" runat="server" UseSubmitBehaviour="false" CausesValidation="false" OnClick="CancelButton_Click"/>
+                    <a href="ManageGames.aspx" class="btn btn-warning btn-lg">Cancel</a>
                     <asp:Button Text="Save" ID="SaveButton" CssClass="btn btn-primary btn-lg" runat="server" OnClick="SaveButton_Click"/>
                 </div>
             </div>
