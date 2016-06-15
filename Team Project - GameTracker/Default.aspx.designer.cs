@@ -7,20 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Team_Project___GameTracker
-{
-
-
-    public partial class Default
-    {
-
+namespace Team_Project___GameTracker {
+    
+    
+    public partial class Default {
+        
         /// <summary>
-        /// Jumbotron control.
+        /// JumbotronH1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Team_Project___GameTracker.User_Controls.Jumbotron Jumbotron;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl JumbotronH1;
+        
+        /// <summary>
+        /// JumbotronH3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl JumbotronH3;
+        
+        /// <summary>
+        /// Calendar1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Calendar Calendar1;
+        
+        /// <summary>
+        /// GameDataList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataList GameDataList;
     }
 }

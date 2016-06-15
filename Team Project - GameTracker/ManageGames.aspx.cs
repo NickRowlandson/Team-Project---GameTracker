@@ -24,7 +24,7 @@ namespace Team_Project___GameTracker
             for (int loop = 0; loop < 7; loop++)
                 Calendar1.SelectedDates.Add(firstDay.AddDays(loop));
             this.week = firstDay;
-            System.Diagnostics.Debug.WriteLine(week);
+
             this.GetGames();
         }
 

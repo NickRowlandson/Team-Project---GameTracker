@@ -12,7 +12,7 @@ namespace Team_Project___GameTracker.User_Controls
         protected void Page_Load(object sender, EventArgs e)
         {
             JumbotronH1.InnerText = "Welcome to Game-Tracker!";
-            JumbotronH3.InnerText = "Register now to get started.";
+            JumbotronH3.InnerText = "Select a calendar week...";
         }
     }
 }
