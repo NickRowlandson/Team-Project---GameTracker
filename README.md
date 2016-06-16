@@ -28,13 +28,13 @@ Game Tracker is a site that will allow you to register and login in order to kee
 
 ## 6. Website Layout
 ### -Home Page-
-![alt tag](https://github.com/NickRowlandson/Team-Project---GameTracker/blob/master/layout-images/HomePage.PNG)
+![alt tag](https://github.com/NickRowlandson/Team-Project---GameTracker/blob/master/layout-images/mainpage.png)
 
 ### -Login Page-
 ![alt tag](https://github.com/NickRowlandson/Team-Project---GameTracker/blob/master/layout-images/LoginPage.PNG)
 
 ### -Admin Page-
-![alt tag](https://github.com/NickRowlandson/Team-Project---GameTracker/blob/master/layout-images/AdminPage.PNG)
+![alt tag](https://github.com/NickRowlandson/Team-Project---GameTracker/blob/master/layout-images/managepage.png)
 
 ### -Add Game Page-
 ![alt tag](https://github.com/NickRowlandson/Team-Project---GameTracker/blob/master/layout-images/AddGame.PNG)
