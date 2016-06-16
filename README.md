@@ -11,8 +11,8 @@ GameTracker Layouts (External Documentation)
 
 
 ## 1. Site Name / Domain
-### Site Name: GAMETRACK
-### Live:  [Click here to view the latest stable version.](http://game-track.azurewebsites.net/Default.aspx)
+#### Site Name: GAMETRACK
+#### Live:  [Click here to view the latest stable version.](http://game-track.azurewebsites.net/Default.aspx)
 
 ## 2. Compatibility
 Works on main browsers: Mozilla, Edge, Chrome, Safari, and IE.
