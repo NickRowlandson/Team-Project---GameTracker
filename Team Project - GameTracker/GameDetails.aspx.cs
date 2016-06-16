@@ -10,6 +10,12 @@ using System.Collections;
 using Team_Project___GameTracker.Models;
 using System.Web.ModelBinding;
 
+/**
+ * @author: Nick Rowlandson & Tim Harasym
+ * @date: June 15 2016
+ * @version: 0.0.2 - Setup calendar week selection for form.
+ */
+
 namespace Team_Project___GameTracker
 {
     public partial class GameDetails : System.Web.UI.Page
@@ -17,20 +23,32 @@ namespace Team_Project___GameTracker
         DateTime week;
         protected void Page_Load(object sender, EventArgs e)
         {
+            // set asp calendar to select by week instead of day
             Calendar2.SelectionMode = CalendarSelectionMode.DayWeek;
             ArrayList selectedDates = new ArrayList();
             DateTime today = DateTime.Now;
             DateTime firstDay = today.AddDays(-(double)(today.DayOfWeek));
             for (int loop = 0; loop < 7; loop++)
                 Calendar2.SelectedDates.Add(firstDay.AddDays(loop));
+
+            // set global week variable to first day of current week
             this.week = firstDay;
 
+            // if post back and querystring then run GetGame.
             if ((!IsPostBack) && (Request.QueryString.Count > 0))
             {
                 this.GetGame();
             }
         }
 
+        /**
+         * <summary>
+         * This method gets the Games from the DB depending on selected calendar week and handles edit functionality.
+         * </summary>
+         * 
+         * @method GetGame
+         * @return {void}
+         */
         protected void GetGame()
         {
             // populate the form with existing data from the database
@@ -58,6 +76,14 @@ namespace Team_Project___GameTracker
             }
         }
 
+        /**
+         * <summary>
+         * This method
+         * </summary>
+         * 
+         * @method SaveButton_Click
+         * @return {void}
+         */
         protected void SaveButton_Click(object sender, EventArgs e)
         {
             // Use Ef to connect to the server
@@ -103,17 +129,36 @@ namespace Team_Project___GameTracker
             }
         }
 
+        /**
+         * <summary>
+         * This method sets the week DateTime variable to the selected calendar week.
+         * </summary>
+         * 
+         * @method Calendar2_SelectionChanged
+         * @return {void}
+         */
         protected void Calendar2_SelectionChanged(object sender, EventArgs e)
         {
+            // set week global variable to selected calendar week
             this.week = Calendar2.SelectedDate;
 
+            // convert week to string and format to display as MM/dd/yyyy
             var formatWeek = week.ToString("MM/dd/yyyy");
 
             CalendarWeekTextBox.Text = formatWeek;
         }
 
+        /**
+         * <summary>
+         * This method renders each day shown in the calendar as non-selectable.
+         * </summary>
+         * 
+         * @method Calendar2_DayRender
+         * @return {void}
+         */
         protected void Calendar2_DayRender(object sender, DayRenderEventArgs e)
         {
+            // sets days in calendar to non-selectable
             e.Day.IsSelectable = false;
         }
     }

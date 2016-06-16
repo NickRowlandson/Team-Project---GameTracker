@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-offset-2 col-md-6">
                 <div class="jumbotron">
-                    <h1 id="JumbotronH1" runat="server">Welcome to GameTracker!</h1>
+                    <h1 id="JumbotronH1" runat="server">Welcome to GAMETRACK!</h1>
                     <h3 id="JumbotronH3" runat="server">Choose a calendar week...</h3>
                 </div>
             </div>

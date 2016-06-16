@@ -5,6 +5,12 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+/**
+ * @author: Nick Rowlandson & Tim Harasym
+ * @date: June 15 2016
+ * @version: 0.0.1  
+ */ 
+
 namespace Team_Project___GameTracker.User_Controls
 {
     public partial class Jumbotron : System.Web.UI.UserControl

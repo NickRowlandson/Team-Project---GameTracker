@@ -10,6 +10,12 @@ using System.Collections;
 using Team_Project___GameTracker.Models;
 using System.Web.ModelBinding;
 
+/**
+ * @author: Nick Rowlandson & Tim Harasym
+ * @date: June 15 2016
+ * @version: 0.0.2 - Setup GameDataList_DeleteCommand() method.
+ */
+
 namespace Team_Project___GameTracker
 {
     public partial class ManageGames : System.Web.UI.Page
@@ -28,6 +34,14 @@ namespace Team_Project___GameTracker
             this.GetGames();
         }
 
+        /**
+         * <summary>
+         * This method gets the Games from the DB depending on selected calendar week.
+         * </summary>
+         * 
+         * @method GetGames
+         * @return {void}
+         */
         protected void GetGames()
         {
             // connect to EF
@@ -45,18 +59,45 @@ namespace Team_Project___GameTracker
             }
         }
 
+        /**
+         * <summary>
+         * This method sets the week DateTime variable to the selected calendar week then runs the GetGames method to refresh the DataList.
+         * </summary>
+         * 
+         * @method Calendar1_SelectionChanged
+         * @return {void}
+         */
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
         {
+            // set week global variable to selected calendar week
             this.week = Calendar1.SelectedDate;
-
+            
+            // run GetGames to refresh DataList
             this.GetGames();
         }
 
+        /**
+         * <summary>
+         * This method renders each day shown in the calendar as non-selectable. 
+         * </summary>
+         * 
+         * @method Calendar1_DayRender
+         * @return {void}
+         */
         protected void Calendar1_DayRender(object sender, DayRenderEventArgs e)
         {
+            // sets days in calendar to non-selectable
             e.Day.IsSelectable = false;
         }
 
+        /**
+         * <summary>
+         * This method processes the game delete functionality.
+         * </summary>
+         * 
+         * @method GameDataList_DeleteCommand
+         * @return {void}
+         */
         protected void GameDataList_DeleteCommand(object source, DataListCommandEventArgs e)
         {
 

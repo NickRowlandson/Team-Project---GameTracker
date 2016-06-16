@@ -9,6 +9,12 @@ using System.Web.UI.WebControls;
 using Team_Project___GameTracker.Models;
 using System.Web.ModelBinding;
 
+/**
+ * @author: Nick Rowlandson & Tim Harasym
+ * @date: June 15 2016
+ * @version: 0.0.2 - Setup LoginButton_Click() method.
+ */
+
 namespace Team_Project___GameTracker
 {
     public partial class Login : System.Web.UI.Page
@@ -18,6 +24,14 @@ namespace Team_Project___GameTracker
 
         }
 
+        /**
+         * <summary>
+         * This method takes login credentials from form and runs them against the database.(NEEDS WORK. *AUTHENTICATION* *PASSWORDHASH*)
+         * </summary>
+         * 
+         * @method LoginButton_Click
+         * @return {void}
+         */
         protected void LoginButton_Click(object sender, EventArgs e)
         {
             // Use Ef to connect to the server

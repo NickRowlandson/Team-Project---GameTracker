@@ -6,8 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 /**
- * @author: Nick Rowlandson
- * @date: June 1 2016
+ * @author: Nick Rowlandson & Tim Harasym
+ * @date: June 15 2016
  * @version: 0.0.1 - added the SetActivePage method.
  */
 namespace Team_Project___GameTracker
