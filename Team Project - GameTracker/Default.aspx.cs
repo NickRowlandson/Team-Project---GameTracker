@@ -34,6 +34,8 @@ namespace Team_Project___GameTracker
 
             // set global week variable to first day of current week
             this.week = firstDay;
+
+            this.GetGames();
         }
 
         /**
@@ -54,7 +56,7 @@ namespace Team_Project___GameTracker
                 var Games = (from allGames in db.Games
                              where allGames.CalendarWeek == week
                              select allGames);
-
+                System.Diagnostics.Debug.WriteLine(Games);
                 // bind the result to the DataList
                 GameDataList.DataSource = Games.ToList();
                 GameDataList.DataBind();

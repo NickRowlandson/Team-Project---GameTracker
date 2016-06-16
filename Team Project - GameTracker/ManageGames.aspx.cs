@@ -47,13 +47,13 @@ namespace Team_Project___GameTracker
             // connect to EF
             using (DefaultConnection db = new DefaultConnection())
             {
-
+                System.Diagnostics.Debug.WriteLine(this.week);
                 // query the games table using EF and LINQ
                 var Games = (from allGames in db.Games
-                             where allGames.CalendarWeek == week
+                             where allGames.CalendarWeek == this.week
                                 select allGames);
 
-                // bind the result to the GridView
+                // bind the result to the DataList
                 GameDataList.DataSource = Games.ToList();
                 GameDataList.DataBind();
             }

@@ -4,14 +4,13 @@
     <div class="container">
         <h1>Manage Games</h1>
         <a href="GameDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add Game</a>
-        <div class="">
-            <asp:Calendar
-                ID="Calendar1"
-                runat="server"
-                OnDayRender="Calendar1_DayRender"
-                SelectionMode="DayWeek"
-                OnSelectionChanged="Calendar1_SelectionChanged"></asp:Calendar>
-        </div>
+        <h3>Choose a calendar week to manage...</h3>
+        <asp:Calendar
+            ID="Calendar1"
+            runat="server"
+            OnDayRender="Calendar1_DayRender"
+            SelectionMode="DayWeek"
+            OnSelectionChanged="Calendar1_SelectionChanged"></asp:Calendar>
 
         <asp:DataList ID="GameDataList"
             RepeatDirection="Horizontal"
@@ -21,8 +20,8 @@
                 <div class="col-md-3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <strong><%#Eval("GameName") %></strong>
-                            <h3><%#Eval("CalendarWeek") %></h3>
+                            <h3><%#Eval("GameName") %></h3>
+                            <strong><%#Eval("CalendarWeek", "{0:d}") %></strong>
                         </div>
                         <div class="panel-body">
                             <div class="text-center">
@@ -33,7 +32,7 @@
                             </div>
                         </div>
                         <div class="panel-footer text-center">
-                            <%#Eval("GameResult") %><br  />
+                            <h2><%#Eval("GameResult") %></h2>
                             <asp:LinkButton ID="DeleteButton" Runat="server" 
                                Text="<i class='fa fa-trash fa-lg'></i> Delete" 
                                CommandName="delete" CssClass="btn btn-danger btn-sm delete"/>
