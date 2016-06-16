@@ -2,17 +2,17 @@
 GameTracker Layouts (External Documentation)
 
 ## Table of Contents
-  1) Site Name
-  2) Compatibility
-  3) Team Logo
-  4) Team Members
-  5) Project Description
-  6) Website Layout
+  1. Site Name
+  2. Compatibility
+  3. Team Logo
+  4. Team Members
+  5. Project Description
+  6. Website Layout
 
 
 ## 1. Site Name / Domain
-Site Name: GAMETRACK
-Live:  [Click here to view the latest stable version.](http://game-track.azurewebsites.net/Default.aspx)
+..* Site Name: GAMETRACK
+..* Live:  [Click here to view the latest stable version.](http://game-track.azurewebsites.net/Default.aspx)
 
 ## 2. Compatibility
 Works on main browsers: Mozilla, Edge, Chrome, Safari, and IE.
@@ -28,13 +28,13 @@ Game Tracker is a site that will allow you to register and login in order to kee
 
 ## 6. Website Layout
 ### -Home Page-
-![alt tag](https://github.com/NickRowlandson/Team-Project---GameTracker/blob/master/layout-images/HomePage.png)
+![alt tag](https://github.com/NickRowlandson/Team-Project---GameTracker/blob/master/layout-images/HomePage.PNG)
 
 ### -Login Page-
-![alt tag](https://github.com/NickRowlandson/Team-Project---GameTracker/blob/master/layout-images/LoginPage.png)
+![alt tag](https://github.com/NickRowlandson/Team-Project---GameTracker/blob/master/layout-images/LoginPage.PNG)
 
 ### -Admin Page-
-![alt tag](https://github.com/NickRowlandson/Team-Project---GameTracker/blob/master/layout-images/AdminPage.png)
+![alt tag](https://github.com/NickRowlandson/Team-Project---GameTracker/blob/master/layout-images/AdminPage.PNG)
 
 ### -Add Game Page-
-![alt tag](https://github.com/NickRowlandson/Team-Project---GameTracker/blob/master/layout-images/AddGame.png)
+![alt tag](https://github.com/NickRowlandson/Team-Project---GameTracker/blob/master/layout-images/AddGame.PNG)
