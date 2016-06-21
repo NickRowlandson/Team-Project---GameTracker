@@ -5,9 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-// Using statements required for EF DB access
-using Team_Project___GameTracker.Models;
-using System.Web.ModelBinding;
+//required for Identity and OWIN security
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
 
 /**
  * @author: Nick Rowlandson & Tim Harasym
@@ -34,31 +35,31 @@ namespace Team_Project___GameTracker
          */
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            // Use Ef to connect to the server
-            using (DefaultConnection db = new DefaultConnection())
+            // create new userStore and userManager objects
+            var userStore = new UserStore<IdentityUser>();
+            var userManager = new UserManager<IdentityUser>(userStore);
+
+            // search for and create a new user object
+            var user = userManager.Find(UserNameTextBox.Text, PasswordTextBox.Text);
+
+            // if a match is a found for the user
+            if (user != null)
             {
-               
-                // get the id from the URL
-                int UserID = 1;
+                // authenticate and login our new user
+                var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+                var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
 
-                // get the user from the EF database
-                var adminUser = (from user in db.AdminUsers
-                                where user.UserID == UserID
-                                select user).FirstOrDefault();
+                // sign in user
+                authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = false }, userIdentity);
 
-                // 
-                var email = adminUser.Email;
-                var password = adminUser.Password;
-
-                if((email == EmailTextBox.Text) && (password == PasswordTextBox.Text ))
-                {
-                    // redirect back to the manage games page
-                    Response.Redirect("~/ManageGames.aspx");
-                }
-                else
-                {
-
-                }
+                // redirect to main menu
+                Response.Redirect("~/GameTrack/ManageGames.aspx");
+            }
+            else
+            {
+                // throw an error to the AlertFlash div
+                StatusLabel.Text = "Invalid Username or Password";
+                AlertFlash.Visible = true;
             }
         }
     }

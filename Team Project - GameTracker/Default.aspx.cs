@@ -54,7 +54,7 @@ namespace Team_Project___GameTracker
         protected void GetGames()
         {
             // connect to EF
-            using (DefaultConnection db = new DefaultConnection())
+            using (GameTrackConnection db = new GameTrackConnection())
             {
 
                 // query the games table using EF and LINQ

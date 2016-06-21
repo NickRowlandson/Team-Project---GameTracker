@@ -16,33 +16,39 @@ namespace Team_Project___GameTracker
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SetActivePage();
+            if (!IsPostBack)
+            {
+                // check is a user is logged in
+                if (HttpContext.Current.User.Identity.IsAuthenticated)
+                {
+                    PrivatePlaceHolder.Visible = true;
+                    PublicPlaceHolder.Visible = false;
+                }
+                else
+                {
+                    PrivatePlaceHolder.Visible = false;
+                    PublicPlaceHolder.Visible = true;
+                }
+            }
+
+            addActiveClass();
         }
 
         /**
          * This method sets the class 'active' to list items 
          * in navigation links
          * 
-         * @method SetActivePage
-         * @return {void}
+         * @method addActiveClass
+         * @return {string}
          */
-        private void SetActivePage()
+        private string addActiveClass()
         {
-            switch (Page.Title)
+            Object activeNode = (System.Web.UI.HtmlControls.HtmlGenericControl)FindControl(Page.Title.ToString().ToLower().Replace(" ", String.Empty));
+            if (activeNode != null)
             {
-                case "Home":
-                    home.Attributes.Add("class", "active");
-                    break;
-                case "Contact":
-                    contact.Attributes.Add("class", "active");
-                    break;
+                ((System.Web.UI.HtmlControls.HtmlGenericControl)activeNode).Attributes.Add("class", "active");
             }
-        }
-
-        protected void LoginButton_Click(object sender, EventArgs e)
-        {
-            // redirect to login page
-            Response.Redirect("~/Login.aspx");
+            return (Page.Title.ToString().ToLower().Replace(" ", String.Empty));
         }
     }
 }

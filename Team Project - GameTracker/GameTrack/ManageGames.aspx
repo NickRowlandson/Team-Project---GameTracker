@@ -3,7 +3,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container">
         <h1>Manage Games</h1>
-        <a href="GameDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add Game</a>
+        <a href="/GameTrack/GameDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add Game</a>
         <h3>Choose a calendar week to manage...</h3>
         <asp:Calendar
             ID="Calendar1"
@@ -36,7 +36,7 @@
                             <asp:LinkButton ID="DeleteButton" Runat="server" 
                                Text="<i class='fa fa-trash fa-lg'></i> Delete" 
                                CommandName="delete" CssClass="btn btn-danger btn-sm delete"/>
-                            <a href='GameDetails.aspx?GameID=<%#Eval("GameID")%>' class="btn btn-primary btn-sm"><i class='fa fa-pencil-square-o fa-lg'></i> Edit</a>
+                            <a href='/GameTrack/GameDetails.aspx?GameID=<%#Eval("GameID")%>' class="btn btn-primary btn-sm"><i class='fa fa-pencil-square-o fa-lg'></i> Edit</a>
                         </div>
                     </div>
                 </div>

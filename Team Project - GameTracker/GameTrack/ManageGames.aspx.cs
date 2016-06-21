@@ -45,7 +45,7 @@ namespace Team_Project___GameTracker
         protected void GetGames()
         {
             // connect to EF
-            using (DefaultConnection db = new DefaultConnection())
+            using (GameTrackConnection db = new GameTrackConnection())
             {
                 System.Diagnostics.Debug.WriteLine(this.week);
                 // query the games table using EF and LINQ
@@ -104,7 +104,7 @@ namespace Team_Project___GameTracker
             int GameID = Convert.ToInt32(GameDataList.DataKeys[e.Item.ItemIndex]);
             System.Diagnostics.Debug.WriteLine(GameID);
 
-            using (DefaultConnection db = new DefaultConnection())
+            using (GameTrackConnection db = new GameTrackConnection())
             {
                 // create object of the game class and store the query string inside of it
                 Game deletedGame = (from gameRecords in db.Games

@@ -61,7 +61,7 @@ namespace Team_Project___GameTracker
             int GameID = Convert.ToInt32(Request.QueryString["GameID"]);
 
             // connect to the EF DB
-            using (DefaultConnection db = new DefaultConnection())
+            using (GameTrackConnection db = new GameTrackConnection())
             {
                 // populate a game object instance with the gameID from the URL parameter
                 Game updatedGame = (from game in db.Games
@@ -93,7 +93,7 @@ namespace Team_Project___GameTracker
         protected void SaveButton_Click(object sender, EventArgs e)
         {
             // Use Ef to connect to the server
-            using (DefaultConnection db = new DefaultConnection())
+            using (GameTrackConnection db = new GameTrackConnection())
             {
                 // Use the game model to create a new game object and also save a new record
                 Game newGame = new Game();
@@ -131,7 +131,7 @@ namespace Team_Project___GameTracker
                 db.SaveChanges();
 
                 // redirect back to the updated manage games page
-                Response.Redirect("~/ManageGames.aspx");
+                Response.Redirect("~/GameTrack/ManageGames.aspx");
             }
         }
 

@@ -4,11 +4,13 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
+                <div class="alert alert-danger" id="AlertFlash" runat="server" visible="false">
+                    <asp:Label runat="server" ID="StatusLabel" />
+                </div>
                 <h1>Login</h1>
                 <div class="form-group">
-                    <label class="control-label" for="EmailTextBox">Email</label>
-                    <asp:TextBox runat="server" TextMode="Email" class="form-control" ID="EmailTextBox" placeholder="Email" required="true"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Email is required!" ControlToValidate="EmailTextBox" SetFocusOnError="true" Display="Dynamic" CssClass="alert-danger"></asp:RequiredFieldValidator>
+                    <label class="control-label" for="UserNameTextBox">Username:</label>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="UserNameTextBox" placeholder="Username" required="true" TabIndex="0"></asp:TextBox>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="PasswordTextBox">Password</label>

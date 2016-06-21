@@ -44,7 +44,7 @@
                     <asp:TextBox runat="server" CssClass="form-control" ID="CalendarWeekTextBox" placeholder="Date mm/dd/yyyy" required="true" ReadOnly="true"></asp:TextBox>
                 </div>
                 <div class="text-right">
-                    <a href="ManageGames.aspx" class="btn btn-warning btn-lg">Cancel</a>
+                    <a href="/GameTrack/ManageGames.aspx" class="btn btn-warning btn-lg">Cancel</a>
                     <asp:Button Text="Save" ID="SaveButton" CssClass="btn btn-primary btn-lg" runat="server" OnClick="SaveButton_Click"/>
                 </div>
             </div>
