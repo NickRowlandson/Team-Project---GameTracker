@@ -24,6 +24,7 @@ namespace Team_Project___GameTracker
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
             // set asp calendar to select by week instead of day
             Calendar1.SelectionMode = CalendarSelectionMode.DayWeek;
             ArrayList selectedDates = new ArrayList();
@@ -33,7 +34,11 @@ namespace Team_Project___GameTracker
                 Calendar1.SelectedDates.Add(firstDay.AddDays(loop));
 
             // set global week variable to first day of current week
-            this.week = firstDay;
+            DateTime s = firstDay;
+            TimeSpan ts = new TimeSpan(24, 0, 0);
+            s = s.Date + ts;
+            this.week = s;
+            System.Diagnostics.Debug.WriteLine(this.week);
 
             this.GetGames();
         }
@@ -54,7 +59,7 @@ namespace Team_Project___GameTracker
 
                 // query the games table using EF and LINQ
                 var Games = (from allGames in db.Games
-                             where allGames.CalendarWeek == week
+                             where allGames.CalendarWeek == this.week
                              select allGames);
                 System.Diagnostics.Debug.WriteLine(Games);
                 // bind the result to the DataList
@@ -89,7 +94,7 @@ namespace Team_Project___GameTracker
         {
             // set week global variable to selected calendar week
             this.week = Calendar1.SelectedDate;
-
+            System.Diagnostics.Debug.WriteLine(this.week);
             // run GetGames to refresh DataList
             this.GetGames();
         }
