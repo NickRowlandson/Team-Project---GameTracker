@@ -29,7 +29,8 @@ namespace Team_Project___GameTracker
             DateTime firstDay = today.AddDays(-(double)(today.DayOfWeek));
             for (int loop = 0; loop < 7; loop++)
                 Calendar1.SelectedDates.Add(firstDay.AddDays(loop));
-            this.week = firstDay;
+
+            this.week = Calendar1.SelectedDate;
 
             this.GetGames();
         }

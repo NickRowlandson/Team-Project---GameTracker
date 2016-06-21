@@ -34,10 +34,8 @@ namespace Team_Project___GameTracker
                 Calendar1.SelectedDates.Add(firstDay.AddDays(loop));
 
             // set global week variable to first day of current week
-            DateTime s = firstDay;
-            TimeSpan ts = new TimeSpan(24, 0, 0);
-            s = s.Date + ts;
-            this.week = s;
+            this.week = Calendar1.SelectedDate;
+
             System.Diagnostics.Debug.WriteLine(this.week);
 
             this.GetGames();

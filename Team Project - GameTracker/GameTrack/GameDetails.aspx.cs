@@ -32,7 +32,7 @@ namespace Team_Project___GameTracker
                 Calendar2.SelectedDates.Add(firstDay.AddDays(loop));
 
             // set global week variable to first day of current week
-            this.week = firstDay;
+            this.week = Calendar2.SelectedDate;
 
             // convert week to string and format to display as MM/dd/yyyy
             var formatWeek = week.ToString("MM/dd/yyyy");
