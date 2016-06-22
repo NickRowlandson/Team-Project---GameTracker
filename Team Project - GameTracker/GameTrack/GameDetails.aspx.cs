@@ -43,6 +43,8 @@ namespace Team_Project___GameTracker
             {
                 this.GetGame();
             }
+
+            // display error if attempting to submit to a full week.
             int errorID = Convert.ToInt32(Request.QueryString["error"]);
             if (errorID == 1)
             {
@@ -50,6 +52,7 @@ namespace Team_Project___GameTracker
                 StatusLabel.Text = "Error: There are already 4 games in this calendar week. Please select another week.";
                 AlertFlash.Visible = true;
 
+                //below removes query string
                 PropertyInfo isreadonly =
                   typeof(System.Collections.Specialized.NameValueCollection).GetProperty(
                   "IsReadOnly", BindingFlags.Instance | BindingFlags.NonPublic);
@@ -57,7 +60,8 @@ namespace Team_Project___GameTracker
                 isreadonly.SetValue(this.Request.QueryString, false, null);
                 // remove
                 this.Request.QueryString.Remove("error");
-            }else
+            }
+            else
             {
                 AlertFlash.Visible = false;
             }
