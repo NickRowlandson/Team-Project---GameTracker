@@ -37,9 +37,6 @@ namespace Team_Project___GameTracker
             // convert week to string and format to display as MM/dd/yyyy
             var formatWeek = week.ToString("MM/dd/yyyy");
 
-            // set CalendarWeekTextBox equal to current calendar week
-            CalendarWeekTextBox.Text = formatWeek;
-
             // if post back and querystring then run GetGame.
             if ((!IsPostBack) && (Request.QueryString.Count > 0))
             {
