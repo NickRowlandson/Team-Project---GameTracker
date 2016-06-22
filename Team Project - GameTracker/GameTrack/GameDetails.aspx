@@ -4,6 +4,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
+                <div class="alert alert-danger" id="AlertFlash" runat="server" visible="false">
+                    <asp:Label runat="server" ID="StatusLabel" />
+                </div>
                 <h1>Game Details</h1>
                 <h5>All Fields are Required</h5>
                 <br />

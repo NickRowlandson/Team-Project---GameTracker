@@ -9,6 +9,7 @@ using System.Collections;
 // Using statements required for EF DB access
 using Team_Project___GameTracker.Models;
 using System.Web.ModelBinding;
+using System.Reflection;
 
 /**
  * @author: Nick Rowlandson & Tim Harasym
@@ -41,6 +42,24 @@ namespace Team_Project___GameTracker
             if ((!IsPostBack) && (Request.QueryString.Count > 0))
             {
                 this.GetGame();
+            }
+            int errorID = Convert.ToInt32(Request.QueryString["error"]);
+            if (errorID == 1)
+            {
+                // throw an error to the AlertFlash div
+                StatusLabel.Text = "Error: There are already 4 games in this calendar week. Please select another week.";
+                AlertFlash.Visible = true;
+
+                PropertyInfo isreadonly =
+                  typeof(System.Collections.Specialized.NameValueCollection).GetProperty(
+                  "IsReadOnly", BindingFlags.Instance | BindingFlags.NonPublic);
+                // make collection editable
+                isreadonly.SetValue(this.Request.QueryString, false, null);
+                // remove
+                this.Request.QueryString.Remove("error");
+            }else
+            {
+                AlertFlash.Visible = false;
             }
         }
 
@@ -117,6 +136,9 @@ namespace Team_Project___GameTracker
                 newGame.GameResult = GameResultTextBox.Text;
                 newGame.CalendarWeek = Convert.ToDateTime(CalendarWeekTextBox.Text);
 
+                //Check if more than 4 records for selected week.
+                this.checkGame(CalendarWeekTextBox.Text);
+
                 // use LINQ to ADO.NET to add / insert new game into the database
 
                 if (GameID == 0)
@@ -126,7 +148,7 @@ namespace Team_Project___GameTracker
 
                 // save our changes
                 db.SaveChanges();
-
+                
                 // redirect back to the updated manage games page
                 Response.Redirect("~/GameTrack/ManageGames.aspx");
             }
@@ -165,5 +187,35 @@ namespace Team_Project___GameTracker
             // sets days in calendar to non-selectable
             e.Day.IsSelectable = false;
         }
+
+         /**
+         * <summary>
+         * This method gets checks if there are 4 games in the selected calendar week. If yes then redirect.
+         * </summary>
+         * 
+         * @method checkGAme
+         * @return {void}
+         */
+ 
+        protected void checkGame(String selectedWeek)
+        {
+            DateTime formattedWeek = Convert.ToDateTime(selectedWeek);
+            // connect to EF
+            using (GameTrackConnection db = new GameTrackConnection())
+            {
+                // query the games table using EF and LINQ
+                var gameCount = (from allGames in db.Games
+                             where allGames.CalendarWeek == formattedWeek
+                             select allGames).Count();
+
+                System.Diagnostics.Debug.WriteLine(gameCount);
+                if(gameCount >= 4)
+                {
+                    // redirect back to the updated manage games page
+                    Response.Redirect("~/GameTrack/GameDetails.aspx?error=1");
+                }
+            }
+        }
+        
     }
 }
