@@ -21,8 +21,37 @@ namespace Team_Project___GameTracker
     public partial class Login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
+        { 
+            /*
+             * USE THIS TO REGISTER ADMIN
+             * 
+            // create new userStore and userManager objects
+            var userStore = new UserStore<IdentityUser>();
+            var userManager = new UserManager<IdentityUser>(userStore);
 
+            // create a new user object
+            var user = new IdentityUser()
+            {
+                UserName = "admin",
+                PhoneNumber = "1234567879",
+                Email = "admin@gametrack.com"
+            };
+
+            // create a new user in the db and store the result
+            IdentityResult result = userManager.Create(user, "gametrackadmin");
+
+            if (result.Succeeded)
+            {
+                StatusLabel.Text = "should be good";
+                AlertFlash.Visible = true;
+            }
+            else
+            {
+                // display error in the AlertFlash div
+                StatusLabel.Text = result.Errors.FirstOrDefault();
+                AlertFlash.Visible = true;
+            }
+            */
         }
 
         /**
