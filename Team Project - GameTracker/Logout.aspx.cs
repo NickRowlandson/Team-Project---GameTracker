@@ -10,6 +10,12 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 
+/**
+ * @author: Nick Rowlandson & Tim Harasym
+ * @date: June 22 2016
+ * @version: 0.0.1 - Call SignOut() method on page load.
+ */
+
 namespace Team_Project___GameTracker
 {
     public partial class Logout : System.Web.UI.Page

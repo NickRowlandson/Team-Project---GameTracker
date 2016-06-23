@@ -9,6 +9,12 @@ using System.Web.UI.WebControls;
 using Team_Project___GameTracker.Models;
 using System.Web.ModelBinding;
 
+/**
+ * @author: Nick Rowlandson & Tim Harasym
+ * @date: June 22 2016
+ * @version: 0.0.1 - Setup delete function.
+ */
+
 namespace Team_Project___GameTracker.Admin
 {
     public partial class Users : System.Web.UI.Page
@@ -21,6 +27,14 @@ namespace Team_Project___GameTracker.Admin
             }
         }
 
+        /**
+         * <summary>
+         * This method gets all users from the DB.
+         * </summary>
+         * 
+         * @method GetUsers
+         * @return {void}
+         */
         protected void GetUsers()
         {
             using (UserConnection db = new UserConnection())
@@ -33,6 +47,14 @@ namespace Team_Project___GameTracker.Admin
             }
         }
 
+        /**
+         * <summary>
+         * This method deletes selected user from the DB.
+         * </summary>
+         * 
+         * @method UsersGridView_RowDeleting
+         * @return {void}
+         */
         protected void UsersGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int selectedRow = e.RowIndex;

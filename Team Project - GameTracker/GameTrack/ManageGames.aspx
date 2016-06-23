@@ -7,7 +7,7 @@
                 <h1 class="panel-title"><i class="fa fa-th-large fa-lg"></i> Manage Games</h1>
             </div>
             <div class="panel-body">
-                <a href="/GameTrack/GameDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i>Add Game</a>
+                <a href="/GameTrack/GameDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add Game</a>
                 <h3>Choose a calendar week to manage...</h3>
                 <asp:Calendar
                     ID="Calendar1"
