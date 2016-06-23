@@ -14,6 +14,12 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 
+/**
+ * @author: Nick Rowlandson & Tim Harasym
+ * @date: June 22 2016
+ * @version: 0.0.1 - Setup edit user functionality.
+ */
+
 namespace Team_Project___GameTracker.Admin
 {
     public partial class UserDetails : System.Web.UI.Page
@@ -34,6 +40,14 @@ namespace Team_Project___GameTracker.Admin
             }
         }
 
+        /**
+         * <summary>
+         * This method gets the User from the DB.
+         * </summary>
+         * 
+         * @method GetUser
+         * @return {void}
+         */
         protected void GetUser()
         {
             string UserID = Request.QueryString["Id"].ToString();
@@ -52,12 +66,28 @@ namespace Team_Project___GameTracker.Admin
             }
         }
 
+        /**
+         * <summary>
+         * This method redirects the users page.
+         * </summary>
+         * 
+         * @method CancelButton_Click
+         * @return {void}
+         */
         protected void CancelButton_Click(object sender, EventArgs e)
         {
             // redirect to the Users page
             Response.Redirect("~/Admin/Users.aspx");
         }
 
+        /**
+         * <summary>
+         * This method saves a new user to the DB.
+         * </summary>
+         * 
+         * @method SaveButton_Click
+         * @return {void}
+         */
         protected void SaveButton_Click(object sender, EventArgs e)
         {
             string UserID = "";
