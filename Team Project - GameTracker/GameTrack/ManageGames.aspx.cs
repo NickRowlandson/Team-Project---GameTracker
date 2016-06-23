@@ -51,7 +51,8 @@ namespace Team_Project___GameTracker
                 var gameCount = (from allGames in db.Games
                                  where allGames.CalendarWeek == this.week
                                  select allGames).Count();
-                System.Diagnostics.Debug.WriteLine(this.week);
+
+                //Shows warning if week selection contains no data.
                 String thisWeek = Convert.ToString(this.week);
                 if((gameCount < 1) && (thisWeek != "1/1/0001 12:00:00 AM"))
                 {
