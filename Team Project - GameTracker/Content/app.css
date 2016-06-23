@@ -21,3 +21,11 @@ body {
 .container .text-muted {
     margin: 20px 0;
 }
+
+.table-padding {
+    padding:15px;
+}
+
+.calendar-padding {
+    margin-bottom:25px;
+}
