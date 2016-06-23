@@ -10,87 +10,87 @@
 namespace Team_Project___GameTracker {
     
     
-    public partial class Navbar {
+    public partial class Register {
         
         /// <summary>
-        /// home control.
+        /// AlertFlash control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl home;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AlertFlash;
         
         /// <summary>
-        /// contact control.
+        /// StatusLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl contact;
+        protected global::System.Web.UI.WebControls.Label StatusLabel;
         
         /// <summary>
-        /// PublicPlaceHolder control.
+        /// UserNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder PublicPlaceHolder;
+        protected global::System.Web.UI.WebControls.TextBox UserNameTextBox;
         
         /// <summary>
-        /// register control.
+        /// PhoneNumberTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl register;
+        protected global::System.Web.UI.WebControls.TextBox PhoneNumberTextBox;
         
         /// <summary>
-        /// login control.
+        /// EmailTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl login;
+        protected global::System.Web.UI.WebControls.TextBox EmailTextBox;
         
         /// <summary>
-        /// PrivatePlaceHolder control.
+        /// PasswordTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder PrivatePlaceHolder;
+        protected global::System.Web.UI.WebControls.TextBox PasswordTextBox;
         
         /// <summary>
-        /// users control.
+        /// ConfirmPasswordTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl users;
+        protected global::System.Web.UI.WebControls.TextBox ConfirmPasswordTextBox;
         
         /// <summary>
-        /// manageGames control.
+        /// CancelButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl manageGames;
+        protected global::System.Web.UI.WebControls.Button CancelButton;
         
         /// <summary>
-        /// logout control.
+        /// RegisterButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl logout;
+        protected global::System.Web.UI.WebControls.Button RegisterButton;
     }
 }

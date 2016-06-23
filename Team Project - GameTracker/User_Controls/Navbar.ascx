@@ -19,11 +19,13 @@
                 <li id="contact" runat="server"><a href="/Contact.aspx"><i class="fa fa-phone fa-lg"></i> Contact</a></li>
 
                 <asp:PlaceHolder ID="PublicPlaceHolder" runat="server">
+                    <li id="register" runat="server"><a href="/Register.aspx"><i class="fa fa-plus fa-lg"></i> Register</a></li>
                     <li id="login" runat="server"><a href="/Login.aspx"><i class="fa fa-sign-in fa-lg"></i> Login</a></li>
                 </asp:PlaceHolder>
 
                 <asp:PlaceHolder ID="PrivatePlaceHolder" runat="server">
-                    <li id="manageGames" runat="server"><a href="/GameTrack/ManageGames.aspx"><i class="fa fa-grid fa-lg"></i> Manage Games</a></li>
+                    <li id="users" runat="server"><a href="/Admin/Users.aspx"><i class="fa fa-users fa-lg"></i> Users</a></li>
+                    <li id="manageGames" runat="server"><a href="/GameTrack/ManageGames.aspx"><i class="fa fa-th-large fa-lg"></i> Manage Games</a></li>
                     <li id="logout" runat="server"><a href="/Logout.aspx"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
                 </asp:PlaceHolder>
 
