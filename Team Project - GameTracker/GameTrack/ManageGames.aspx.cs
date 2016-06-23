@@ -25,10 +25,6 @@ namespace Team_Project___GameTracker
         {
             Calendar1.SelectionMode = CalendarSelectionMode.DayWeek;
             ArrayList selectedDates = new ArrayList();
-            DateTime today = DateTime.Now;
-            DateTime firstDay = today.AddDays(-(double)(today.DayOfWeek));
-            for (int loop = 0; loop < 7; loop++)
-                Calendar1.SelectedDates.Add(firstDay.AddDays(loop));
 
             this.week = Calendar1.SelectedDate;
 
@@ -48,7 +44,6 @@ namespace Team_Project___GameTracker
             // connect to EF
             using (GameTrackConnection db = new GameTrackConnection())
             {
-                System.Diagnostics.Debug.WriteLine(this.week);
                 // query the games table using EF and LINQ
                 var Games = (from allGames in db.Games
                              where allGames.CalendarWeek == this.week
@@ -103,7 +98,6 @@ namespace Team_Project___GameTracker
         {
 
             int GameID = Convert.ToInt32(GameDataList.DataKeys[e.Item.ItemIndex]);
-            System.Diagnostics.Debug.WriteLine(GameID);
 
             using (GameTrackConnection db = new GameTrackConnection())
             {
