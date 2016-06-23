@@ -41,3 +41,11 @@ body {
     transition: background 0.75s;
 }
 
+
+.table-padding {
+    padding:15px;
+}
+
+.calendar-padding {
+    margin-bottom:25px;
+}
