@@ -16,10 +16,8 @@
             <ul class="nav navbar-nav navbar-right">
 
                 <li id="home" runat="server"><a href="/Default.aspx"><i class="fa fa-home fa-lg"></i> Home</a></li>
-                <li id="contact" runat="server"><a href="/Contact.aspx"><i class="fa fa-phone fa-lg"></i> Contact</a></li>
 
                 <asp:PlaceHolder ID="PublicPlaceHolder" runat="server">
-                    <li id="register" runat="server"><a href="/Register.aspx"><i class="fa fa-plus fa-lg"></i> Register</a></li>
                     <li id="login" runat="server"><a href="/Login.aspx"><i class="fa fa-sign-in fa-lg"></i> Login</a></li>
                 </asp:PlaceHolder>
 
@@ -28,6 +26,8 @@
                     <li id="manageGames" runat="server"><a href="/GameTrack/ManageGames.aspx"><i class="fa fa-th-large fa-lg"></i> Manage Games</a></li>
                     <li id="logout" runat="server"><a href="/Logout.aspx"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
                 </asp:PlaceHolder>
+
+                <li id="contact" runat="server"><a href="/Contact.aspx"><i class="fa fa-phone fa-lg"></i> Contact</a></li>
 
             </ul>
         </div>
