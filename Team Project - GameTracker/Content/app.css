@@ -21,3 +21,23 @@ body {
 .container .text-muted {
     margin: 20px 0;
 }
+
+/* Override bootstrap styles */
+.navbar-inverse{
+    border-radius: 0 !important; 
+    background: #242424;
+}
+.navbar{
+    border-radius: 0 !important; 
+}
+
+.navbar-inverse .navbar-nav li a{
+    background: #242424 !important;
+}
+
+.navbar-inverse .navbar-nav li a:hover{
+    background: #121212 !important;
+    -webkit-transition: background 0.75s; /* Safari */
+    transition: background 0.75s;
+}
+
