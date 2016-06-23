@@ -22,6 +22,24 @@ namespace Team_Project___GameTracker {
         protected global::System.Web.UI.WebControls.Calendar Calendar1;
         
         /// <summary>
+        /// AlertFlash control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl AlertFlash;
+        
+        /// <summary>
+        /// StatusLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StatusLabel;
+        
+        /// <summary>
         /// GameDataList control.
         /// </summary>
         /// <remarks>

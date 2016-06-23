@@ -15,7 +15,11 @@
                     OnDayRender="Calendar1_DayRender"
                     SelectionMode="DayWeek"
                     OnSelectionChanged="Calendar1_SelectionChanged"
-                    CssClass="calendar-padding"></asp:Calendar>
+                    CssClass="calendar-padding">
+                </asp:Calendar>
+                <div class="alert alert-warning" id="AlertFlash" runat="server" visible="false">
+                    <asp:Label runat="server" ID="StatusLabel" />
+                </div>
 
                 <asp:DataList ID="GameDataList"
                     RepeatDirection="Horizontal"
