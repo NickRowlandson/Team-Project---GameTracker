@@ -21,8 +21,11 @@
                     <li id="login" runat="server"><a href="/Login.aspx"><i class="fa fa-sign-in fa-lg"></i> Login</a></li>
                 </asp:PlaceHolder>
 
-                <asp:PlaceHolder ID="PrivatePlaceHolder" runat="server">
+                <asp:PlaceHolder ID="UserPlaceHolder" runat="server">
                     <li id="users" runat="server"><a href="/Admin/Users.aspx"><i class="fa fa-users fa-lg"></i> Users</a></li>
+                </asp:PlaceHolder>
+
+                <asp:PlaceHolder ID="PrivatePlaceHolder" runat="server">
                     <li id="manageGames" runat="server"><a href="/GameTrack/ManageGames.aspx"><i class="fa fa-th-large fa-lg"></i> Manage Games</a></li>
                     <li id="logout" runat="server"><a href="/Logout.aspx"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
                 </asp:PlaceHolder>

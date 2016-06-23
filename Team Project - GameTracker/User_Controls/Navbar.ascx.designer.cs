@@ -40,13 +40,13 @@ namespace Team_Project___GameTracker {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl login;
         
         /// <summary>
-        /// PrivatePlaceHolder control.
+        /// UserPlaceHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder PrivatePlaceHolder;
+        protected global::System.Web.UI.WebControls.PlaceHolder UserPlaceHolder;
         
         /// <summary>
         /// users control.
@@ -56,6 +56,15 @@ namespace Team_Project___GameTracker {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl users;
+        
+        /// <summary>
+        /// PrivatePlaceHolder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder PrivatePlaceHolder;
         
         /// <summary>
         /// manageGames control.

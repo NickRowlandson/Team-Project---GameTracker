@@ -4,10 +4,10 @@
     <div class="container">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h1 class="panel-title"><i class="fa fa-users fa-lg"></i>Users</h1>
+                <h1 class="panel-title"><i class="fa fa-users fa-lg"></i> Users</h1>
             </div>
             <div class="panel-body table-padding">
-                <a href="/Admin/UserDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i>Register New User</a>
+                <a href="/Admin/UserDetails.aspx" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Register New User</a>
                 <div class="table-padding">
                     <asp:GridView runat="server" ID="UsersGridView" AutoGenerateColumns="false"
                         CssClass="table table-bordered table-striped table-hover table-padding" OnRowDeleting="UsersGridView_RowDeleting" DataKeyNames="Id">

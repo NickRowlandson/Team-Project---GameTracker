@@ -5,6 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+//required for Identity and OWIN security
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.Owin.Security;
+
 /**
  * @author: Nick Rowlandson & Tim Harasym
  * @date: June 15 2016
@@ -23,11 +28,21 @@ namespace Team_Project___GameTracker
                 {
                     PrivatePlaceHolder.Visible = true;
                     PublicPlaceHolder.Visible = false;
+
+                    if (HttpContext.Current.User.Identity.GetUserName() == "admin")
+                    {
+                        UserPlaceHolder.Visible = true;
+                    }
+                    else
+                    {
+                        UserPlaceHolder.Visible = false;
+                    }
                 }
-                else
+                else 
                 {
                     PrivatePlaceHolder.Visible = false;
                     PublicPlaceHolder.Visible = true;
+                    UserPlaceHolder.Visible = false;
                 }
             }
 
