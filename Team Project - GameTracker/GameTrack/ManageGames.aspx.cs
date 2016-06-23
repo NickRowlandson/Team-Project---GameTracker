@@ -53,7 +53,7 @@ namespace Team_Project___GameTracker
                                  select allGames).Count();
                 System.Diagnostics.Debug.WriteLine(this.week);
                 String thisWeek = Convert.ToString(this.week);
-                if((gameCount < 1) && (thisWeek != "01/01/0001 12:00:00 AM"))
+                if((gameCount < 1) && (thisWeek != "1/1/0001 12:00:00 AM"))
                 {
                     StatusLabel.Text = "There is nothing in this week!";
                     AlertFlash.Visible = true;
