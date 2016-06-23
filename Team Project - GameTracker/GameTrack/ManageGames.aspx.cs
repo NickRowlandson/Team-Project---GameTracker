@@ -48,6 +48,8 @@ namespace Team_Project___GameTracker
                 var Games = (from allGames in db.Games
                              where allGames.CalendarWeek == this.week
                                 select allGames);
+
+                //Count SQL Row results
                 var gameCount = (from allGames in db.Games
                                  where allGames.CalendarWeek == this.week
                                  select allGames).Count();

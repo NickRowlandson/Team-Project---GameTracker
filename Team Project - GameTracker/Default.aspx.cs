@@ -59,7 +59,25 @@ namespace Team_Project___GameTracker
                 var Games = (from allGames in db.Games
                              where allGames.CalendarWeek == this.week
                              select allGames);
-                System.Diagnostics.Debug.WriteLine(Games);
+
+                //Count SQL Row results
+                var gameCount = (from allGames in db.Games
+                                 where allGames.CalendarWeek == this.week
+                                 select allGames).Count();
+
+                //Shows warning if week selection contains no data.
+                String thisWeek = Convert.ToString(this.week);
+                if ((gameCount < 1) && (thisWeek != "1/1/0001 12:00:00 AM"))
+                {
+                    StatusLabel.Text = "There is nothing in this week!";
+                    AlertFlash.Visible = true;
+                }
+                else
+                {
+                    AlertFlash.Visible = false;
+                }
+
+
                 // bind the result to the DataList
                 GameDataList.DataSource = Games.ToList();
                 GameDataList.DataBind();

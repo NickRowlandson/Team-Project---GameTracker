@@ -16,6 +16,9 @@
                         SelectionMode="DayWeek"
                         OnSelectionChanged="Calendar1_SelectionChanged"></asp:Calendar>
                 </div>
+                <div class="alert alert-warning" id="AlertFlash" runat="server" visible="false">
+                    <asp:Label runat="server" ID="StatusLabel" />
+                </div>
                 <asp:DataList ID="GameDataList"
                     RepeatDirection="Horizontal"
                     RepeatLayout="Flow"
